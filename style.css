@@ -119,6 +119,7 @@ outline: none;
     width: 100%;
 border-bottom: 0.25rem solid #833E5B;
 text-transform: uppercase;
+user-select: none;
 }
 .gbtn:hover {
     
