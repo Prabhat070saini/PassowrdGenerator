@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="javascript.js"></script>
+    <title>Password generator</title>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <h1>Password generator</h1>
+        <div class="display-container">
+          <input readonly placeholder="Password" class="display" data-show />
+          <button cpbtn>
+            <span data-massage></span>
+            <ion-icon name="copy-outline"></ion-icon>
+          </button>
+        </div>
+
+        <div class="input-container">
+          <div class="length-container">
+            <p>Password length</p>
+            <p number-change>0</p>
+          </div>
+          <input
+            type="range"
+            min="1"
+            max="20"
+            class="slider"
+            step="1"
+            data-slider
+          />
+          <!-- checkbon -->
+          <div>
+            <input type="checkbox" id="uppercase" />
+            <label for="uppercase">Include uppercase latter</label>
+          </div>
+          <div>
+            <input type="checkbox" id="lowercase" />
+            <label for="lowercase">Include lowercase latter</label>
+          </div>
+          <div>
+            <input type="checkbox" id="Numbers" />
+            <label for="Numbers">Include Numbers</label>
+          </div>
+          <div>
+            <input type="checkbox" id="symbole" />
+            <label for="symbole">Include symbole</label>
+          </div>
+          <!-- strength -->
+          <div class="strength-container">
+            <p>strength</p>
+            <div class="indicator" style="color: white" data-indicater></div>
+          </div>
+
+          <button class="gbtn" btngntare>Generate Password</button>
+        </div>
+      </div>
+    </div>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
