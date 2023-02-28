@@ -42,6 +42,7 @@ padding-top: 0.35rem;
 }
 .display{
 width: 100%;
+max-width: 85%;
 background-color: transparent;
 padding: 1.15rem 1rem;
 color: var(--vb-yellow);
