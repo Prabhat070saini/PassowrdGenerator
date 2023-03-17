@@ -28,9 +28,10 @@
         <h1>Password generator</h1>
         <div class="display-container">
           <input readonly placeholder="Password" class="display" data-show />
-          <button cpbtn>
-            <span data-massage></span>
-            <ion-icon name="copy-outline"></ion-icon>
+          <button class="copybtn" cpbtn>
+            <span class="tooltip tooltip.active" data-massage></span>
+            <!-- <ion-icon class="imscopu" name="copy-outline"></ion-icon> -->
+            <img src="copy.svg" alt="" />
           </button>
         </div>
 
@@ -48,19 +49,19 @@
             data-slider
           />
           <!-- checkbon -->
-          <div>
+          <div class="checked">
             <input type="checkbox" id="uppercase" />
             <label for="uppercase">Include uppercase latter</label>
           </div>
-          <div>
+          <div class="checked">
             <input type="checkbox" id="lowercase" />
             <label for="lowercase">Include lowercase latter</label>
           </div>
-          <div>
+          <div class="checked">
             <input type="checkbox" id="Numbers" />
             <label for="Numbers">Include Numbers</label>
           </div>
-          <div>
+          <div class="checked">
             <input type="checkbox" id="symbole" />
             <label for="symbole">Include symbole</label>
           </div>

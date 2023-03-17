@@ -36,6 +36,13 @@ let = suffalPasswored = (a) => {
 let handleSlider = () => {
     inputslider.value = passwordlength;
     lengthdisplay.innerText = passwordlength;
+    // for make some parrt different color and some different
+    const min = inputslider.min;
+    const max = inputslider.max;
+    // console.log(max);
+    // important
+    // console.log(min);
+    inputslider.style.backgroundSize = ((passwordlength - min) * 100 / (max - min)) + "% 100%"
 }
 handleSlider();
 // ---------------------Function to Genrarte Interger nukmber between range-----------------------------
@@ -46,7 +53,7 @@ let randonInteger = (min, max) => {
 //------------------Funtion to set indicator-----------------------------------------\
 let setIndicator = (color) => {
     dataindicator.style.backgroundColor = color;
-
+    dataindicator.style.boxShadow = `0px 0px 12px 1px ${color}`;
 
 }
 setIndicator("#ccc");
@@ -80,7 +87,7 @@ async function copyContent() {
     copyMsg.classList.add("active");
     setTimeout(() => {
         copyMsg.classList.remove("active");
-    }, 2000);
+    }, 1000);
 }
 // -------------------Calculate Strength function--------------------------------------------
 let calcStrength = () => {
@@ -93,12 +100,12 @@ let calcStrength = () => {
     if (Numbercheckers.checked) hasaNum = true;
     if (symbolechecker.checked) hasSym = true;
     if (hasUpper && hasLower && hasaNum && hasSym && passwordlength >= 8) {
-        // setIndicator("gree")
+        setIndicator("#40f55b");
     }
     else if ((hasLower || hasUpper) && (hasaNum || hasSym) && (passwordlength) >= 6) {
-
+        setIndicator("yellow");
     } else {
-
+        setIndicator("#f72a2a")
     }
 
 }

@@ -7,8 +7,16 @@ font-family: 'Roboto Slab', serif;
 :root{
     --dk-violet:hsl(268,75%,9%);
     --lt--violet:hsl(268, 47%, 21%);
+    --lt-voilet2:hsl(281,89%,26%);
+    --vb-voilter:hsl(285,91%,52%);
+    --vb-voilet2:hsl(290,70%,36%);
+
     --pl-white:hsl(0,0%,100%);
     --vb-yellow:hsl(52,100%,62%);
+    --vb-cyan:hsl(177,92%,70%);
+    --vb--cyan2:hsl(177,92%,70%);
+    --dk-text:hsl(198,20%,13%);
+
 }
 .wrapper
 {
@@ -121,6 +129,8 @@ outline: none;
 border-bottom: 0.25rem solid #833E5B;
 text-transform: uppercase;
 user-select: none;
+font-weight: 600;
+font-size: 1.25rem;
 }
 .gbtn:hover {
     
@@ -136,4 +146,101 @@ user-select: none;
 
     }
     
+}
+
+.checked{
+    display: flex;
+    align-items: center;
+    border-radius: 1px solid pink;
+    margin: 1rem 0; 
+    gap: 0 1rem;
+}
+.checked input{
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    cursor: pointer;
+    border: 1px solid var(--vb-cyan);
+    border-radius: 0.35rem;
+}
+.checked input:checked{
+    background-color: var(--vb-cyan);
+}
+.checked input:checked::before{
+    content: "\2713";
+    position: absolute; 
+    color:hsl(198,20%,13%);
+    font-size: 1.05rem;
+    font-weight: 600;
+    left: 50%;
+    top: -3.5px;
+     transform: translateX(-50%) translateY(10%);
+}
+.checked label{
+    color: hsl(0,0%,100%);
+    font-size: 1rem;
+    letter-spacing: 0.75px;
+    text-transform: capitalize;
+}
+.slider{
+    appearance: none;
+    width: 100%;
+    height: 0.75rem;
+    cursor: pointer;
+    background-color:var(--lt--violet);
+    border-radius: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    background-image: linear-gradient(var(--vb-voilter),var(--vb-voilter));
+    background-repeat: no-repeat;border: none;
+    outline: none;
+}
+.slider::-webkit-slider-thumb{
+    appearance: none;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    background-color: var(--vb-yellow);
+    cursor: pointer;
+    margin-top: -3px;
+    box-shadow: 0px 0px 20px 0px rgba(255, 229, 61, 0.50);
+    transition: all 100ms ease-in;
+}
+.slider:focus{
+    outline: 3px solid var(--vb-yellow);
+}
+.copybtn{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    width: 1.75rem;
+    cursor: pointer;
+}
+.copybtn img {
+width: 100%;
+height: 100%;
+}
+.tooltip{
+    position: absolute;
+    background-color: var(--vb-voilet2);
+    color: var(--vb-yellow);
+    font-size: 1.25rem;
+    top: -35px;
+    left: -25px;
+    padding: 5px 10px;
+    border-radius: 1rem;
+    opacity: 0;
+    transform: scale(0);
+    transform-origin: bottom;
+    transition: all 250ms ease-in-out;
+}
+.tooltip.active{
+    opacity: 1;
+    transform: scale(1);;
+}
+.imscopu{
+    background: transparent;
+        border: none;
+        outline: none;
 }
